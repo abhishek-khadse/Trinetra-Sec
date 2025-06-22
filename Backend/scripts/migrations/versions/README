@@ -1,0 +1,26 @@
+This directory contains the migration scripts for the database schema.
+
+Each migration script is automatically generated and should not be manually edited.
+
+## Creating a new migration
+
+1. Make changes to your SQLAlchemy models
+2. Run: `alembic revision --autogenerate -m "description of changes"`
+3. Review the generated migration script
+4. Run: `alembic upgrade head` to apply the migration
+
+## Reverting a migration
+
+To revert to a previous version:
+
+```bash
+alembic downgrade -1  # Revert one migration
+alembic downgrade <revision_id>  # Revert to a specific revision
+```
+
+## Viewing migration history
+
+```bash
+alembic history  # Show migration history
+alembic current  # Show current database revision
+```
